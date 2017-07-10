@@ -2,7 +2,8 @@
 
 ## 本例是egret的demo
 
-## PS:下面是我封装的一个下拉菜单控件：
+## PS:
+## 1、下面是我封装的一个下拉菜单控件：
 
 * [控件链接地址](http://bbs.egret.com/thread-27076-1-1.html)
 
@@ -112,3 +113,6 @@ module euiextendsion {
 }
 
 ```
+
+## 2、屏幕适配策略
+* [适配策略地址](http://bbs.egret.com/thread-27676-1-1.html)
