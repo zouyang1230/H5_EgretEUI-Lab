@@ -1,9 +1,6 @@
 # H5_EgretEUI-Lab
 
-## 本例是egret的demo
-
-## PS:
-## 1、下面是封装的一个下拉菜单控件：
+## 1、Egret界面UI库在老版本GUI下是有下拉菜单控件的，新版本EUI废除了下拉菜单控件，下面是封装的一个在新版本下的下拉菜单控件，可以直接使用：
 
 * [控件链接地址](http://bbs.egret.com/thread-27076-1-1.html)
 
@@ -132,10 +129,7 @@ module euiextendsion {
 class MyGrid extends egret.Shape{
 想要自定义一个容器非常容易，我们编写一个类，并且继承 DisplayObjectContainer 即可。当然，如果你想实现相关的Graphics绘图功能，你也可以继承 Sprite。
 
-3、声明 Shape 对象：
- let  shp:egret.Shape = new egret.Shape();
- 
- 4、深度(层级)
+3、深度(层级)
 每一个容器都会有一个自己的深度管理功能.这个深度值实际上就是一个显示对象的叠放次序。我们也称之为 “z-次序”。
 Egret中容器的深度都是从0开始的，当一个显示对象第一个被添加到容器中时，它的深度值为0。这个显示对象也处于容器的最底层。当我们添加第二个显示对象的时候，他的深度值为1，并且在第一个显示对象上方。从0开始，每次深度加1
 获取当前容器的子对象数量:：容器.numChildren
@@ -148,20 +142,20 @@ Egret中容器的深度都是从0开始的，当一个显示对象第一个被�
 重设显示对象的深度：容器.setChildIndex( 显示对象, 新的深度值 );
 容器.parent  可以获取当前容器的父容器(父级)
 
-5、要获取一个容器的子对象：
+4、要获取一个容器的子对象：
 第一种是通过子对象的深度值来获取子对象：父容器.getChildAt( 深度值 );     例：
 let _spr:egret.DisplayObject = sprcon.getChildAt( 1 );
 第二种是通过子对象的 name 属性来获取：
 let _spr:egret.DisplayObject = sprcon.getChildByName( "sprite2" );  //前提是某个容器我们要设置好name属性：    容器.name = "sprite2";
 对比：第一种方式性能更优，推荐。
 
-6、文本：
+5、文本：
 Egret 提供三种不同的文本类型，不同类型具有以下特点：
 普通文本：用于显示标准文本内容的文本类型。
 输入文本：允许用户输入的文本类型。
 位图文本：借助位图字体渲染的文本类型。
 
-7、创建文本：
+6、创建文本：
 var label:egret.TextField = new egret.TextField(); 
 label.text = "这是一个文本"; 
 this.addChild( label );
@@ -172,7 +166,7 @@ displayObject.addChild( textField_Object );
 还可以使用 egret.TextField.default_size 设置全局的默认文本字号大小。
 PS：egret.TextField 对象自身尺寸会根据首次设置的文本内容自动计算。所以，当 text 属性被赋予不同内容时，其尺寸也会不同。
 
-8、文本超链接事件
+7、文本超链接事件
 1）情况一：针对整个TextField的：TextField本身可以响应Touch事件
 2）在一大段文字中，对部分文字超链接：
 var tx:egret.TextField = new egret.TextField;
@@ -187,7 +181,7 @@ tx.addEventListener( egret.TextEvent.LINK, function( evt:egret.TextEvent ){
 其中 href 属性的内容以 event: 开头，后边跟随一个字符串，用于输出相应的文字或用于识别包含该链接的文字段。
 然后侦听 TextEvent.LINK 事件，在事件处理函数中通过事件对象的 text 属性来获取该段文字所设置的字符串。
 
-9、exml使用背景：
+8、exml使用背景：
 背景可以使用exml的皮肤，同级下直接使用  exml文件名不带后缀写在skinname属性内
 ```
 
