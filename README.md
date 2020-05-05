@@ -185,4 +185,4 @@ tx.addEventListener( egret.TextEvent.LINK, function( evt:egret.TextEvent ){
 背景可以使用exml的皮肤，同级下直接使用  exml文件名不带后缀写在skinname属性内
 ```
 
-### 省略一大坨，有需要完整笔记的童鞋可以私信我 7012490
+### 省略一大坨，有需要完整笔记的童鞋可以私信我邮箱
